@@ -61,7 +61,7 @@ def get_d_from_e(a,b):
 	return y2
 
 def RSA_jiami(e,n):
-	m = input('输入明文加密： ')
+	m = input("输入明文加密： ")
 	c = []
 	#d = []
 	u = []
@@ -74,7 +74,7 @@ def RSA_jiami(e,n):
 
 	o = hex(o)
 	print ("密文长度为：", o)
-	print ('解密后的明文(16进制): ',u)
+	print ("解密后的明文(16进制): ",u)
 	print ("密文： ", c)
 	return c
 
@@ -88,7 +88,7 @@ def RSA_jiemi(d,n,t):
 	for i in m:
 		a = a + chr(i)
 	#print ('解密后的明文(16进制): ',h)
-	print ('解密后的明文: ',a)
+	print ("解密后的明文: ",a)
 
 
 # 签名
@@ -98,7 +98,7 @@ def RSA_sign(x, d, n):
 
 def RSA_ver(x,y,e,n):
 	if (x == pow(y,e,n)):
-		print ('验证通过')
+		print ("验证通过")
 
 # RSA整体
 def RSA():
@@ -110,10 +110,10 @@ def RSA():
 	print('--- euler_n = ',euler_n)
 	e = product_e(euler_n)
 	d = get_d_from_e(e, euler_n)
-	print('公钥： ',e,n)
-	print('私钥： ',d,p,q)
+	print("公钥： ",e,n)
+	print("私钥： ",d,p,q)
 	k = []
-	k = input('请输入需要签名的信息：')
+	k = input("请输入需要签名的信息：")
 	m = []
 	for i in k:
 		m.append(ord(i))

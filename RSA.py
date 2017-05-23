@@ -18,7 +18,8 @@ def aks_sushupanding(n):
 def get_suijisushu():
 	flag = 0
 	while not flag:
-		n = random.randrange(2**1022,2**1024)
+		n = random.randrange(2**1023, 2**1024)
+		# 剔除部分不可靠因子
 		if (n%2 == 0 or n%3 == 0 or n%5 == 0 or n%7 == 0 or n%13 == 0):
 			continue
 		flag = aks_sushupanding(n)

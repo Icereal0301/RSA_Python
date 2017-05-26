@@ -52,7 +52,7 @@ def get_d_from_e(a,b):
 	if (a < b):
 		a,b = b,a
 	x2 = 1;x1 = 0; y2 = 0; y1 = 1
-	# 乘法逆元
+	# 乘法逆元(获得乘法逆元的简单算法)
 	while (b > 0):
 		q = a//b
 		r = a -q*b; x = x2 - q*x1; y = y2 - q*y1
